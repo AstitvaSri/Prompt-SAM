@@ -38,7 +38,7 @@ class PromptSAM(object):
           first=False
         else:
           IMG_FEAT = torch.vstack([IMG_FEAT,image_features])
-    return IMG_FEAT[
+    return IMG_FEAT
                                   
   def upload_image(self, image_uploaded, progress=gr.Progress()):
     self.masked_images = self.get_masked_images(image_uploaded,self.max_mask_num)
