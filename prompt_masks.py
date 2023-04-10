@@ -43,7 +43,7 @@ class PromptSAM(object):
                                   
     def upload_image(self, image_uploaded, progress=gr.Progress()):
         self.get_masked_images(image_uploaded,self.max_mask_num)
-        self.get_masked_features(self.masked_images,progress)
+        self.get_masked_features(progress)
         message = "Processing Done! Ready for Prompting."
         return message
 
