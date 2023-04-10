@@ -4,7 +4,9 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 <br/>
-PromptSAM = SAM + CLIP
+<br/>
+**PromptSAM = SAM + CLIP**
+<br/>
 <br/>
 <kbd>
   <img src="https://github.com/AstitvaSri/Prompt-SAM/blob/main/demo_videos/1.gif" width="100%">
