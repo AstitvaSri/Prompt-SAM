@@ -4,6 +4,7 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 <br/>
+(Adding more details soon...)
 <br/>
 <kbd>
   <img src="https://github.com/AstitvaSri/Prompt-SAM/blob/main/demo_files/1.jpg" width="50%"><img src="https://github.com/AstitvaSri/Prompt-SAM/blob/main/demo_files/1.gif" width="50%">
