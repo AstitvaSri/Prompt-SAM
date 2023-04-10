@@ -1,3 +1,3 @@
 # Prompt-SAM
 
-https://user-images.githubusercontent.com/AstitvaSri/demo_videos/1.mp4
+https://raw.githubusercontent.com/AstitvaSri/Prompt-SAM/main/demo_videos/1.mp4
