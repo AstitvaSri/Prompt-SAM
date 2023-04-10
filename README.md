@@ -1,4 +1,4 @@
-# Prompt-SAM : Processing SAM output with Text Prompt.
+# Prompt-SAM : Processing SAM's output with Text Prompt
 
 <a target="_blank" href="https://colab.research.google.com/github/AstitvaSri/Prompt-SAM/blob/main/Prompt_SAM_Colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
