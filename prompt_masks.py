@@ -24,12 +24,12 @@ class PromptSAM(object):
             temp_mask = mask['segmentation']
             temp_img[temp_mask == False] = [255,255,255]
             masked_images.append(temp_img)
-        return masked_images
+        self.masked_images = masked_images
 
-    def get_masked_features(self, masked_images, progress=gr.Progress()):
+    def get_masked_features(self, progress=gr.Progress()):
         IMG_FEAT = None
         first=True
-        for masked_img in progress.tqdm(masked_images):
+        for masked_img in progress.tqdm(self.masked_images):
             image = self.preprocess(Image.fromarray(masked_img)).unsqueeze(0)
             with torch.no_grad(), torch.cuda.amp.autocast():
                 image_features = self.model.encode_image(image)
@@ -39,11 +39,11 @@ class PromptSAM(object):
                     first=False
                 else:
                     IMG_FEAT = torch.vstack([IMG_FEAT,image_features])
-        return IMG_FEAT
+        self.IMG_FEAT = IMG_FEAT
                                   
     def upload_image(self, image_uploaded, progress=gr.Progress()):
-        self.masked_images = self.get_masked_images(image_uploaded,self.max_mask_num)
-        self.IMG_FEAT = self.get_masked_features(self.masked_images,progress)
+        self.get_masked_images(image_uploaded,self.max_mask_num)
+        self.get_masked_features(self.masked_images,progress)
         message = "Processing Done! Ready for Prompting."
         return message
 
