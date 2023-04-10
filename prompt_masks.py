@@ -27,7 +27,7 @@ class PromptSAM(object):
 
   def get_masked_features(self, masked_images, progress=gr.Progress()):
     IMG_FEAT = None
-    first=True-+
+    first=True
     for masked_img in progress.tqdm(masked_images):
       image = self.preprocess(Image.fromarray(masked_img)).unsqueeze(0)
       with torch.no_grad(), torch.cuda.amp.autocast():
