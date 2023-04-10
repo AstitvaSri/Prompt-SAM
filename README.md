@@ -5,7 +5,7 @@
 </a>
 <br/>
 <br/>
-**PromptSAM = SAM + CLIP**
+*PromptSAM = SAM + CLIP*
 <br/>
 <br/>
 <kbd>
