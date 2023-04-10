@@ -15,7 +15,7 @@ class PromptSAM(object):
     self.tokenizer = tokenizer
     self.preprocess = preprocess
     
-  def get_masked_images(img, MAX_NUM_MASK):
+  def get_masked_images(self, img, MAX_NUM_MASK):
     masks = mask_generator.generate(img)
     masked_images = []
     for mask in masks[:MAX_NUM_MASK]:
@@ -25,7 +25,7 @@ class PromptSAM(object):
       masked_images.append(temp_img)
     return masked_images
 
-  def get_masked_features(masked_images, progress=gr.Progress()):
+  def get_masked_features(self, masked_images, progress=gr.Progress()):
     IMG_FEAT = None
     first=True
     for masked_img in progress.tqdm(masked_images):
