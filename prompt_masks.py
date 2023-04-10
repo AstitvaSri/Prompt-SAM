@@ -41,8 +41,8 @@ class PromptSAM(object):
     return IMG_FEAT[
                                   
   def upload_image(self, image_uploaded, progress=gr.Progress()):
-    self.masked_images = get_masked_images(image_uploaded,self.max_mask_num)
-    self.IMG_FEAT = get_masked_features(self.masked_images,progress)
+    self.masked_images = self.get_masked_images(image_uploaded,self.max_mask_num)
+    self.IMG_FEAT = self.get_masked_features(self.masked_images,progress)
     message = "Processing Done! Ready for Prompting."
     return message
 
